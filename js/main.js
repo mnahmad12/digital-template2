@@ -42,8 +42,9 @@ function create() {
 		cats.y=50;
     }
 	
-    game.physics.p2.enable(player);
-
+    game.physics.arcade.enable(player);
+	game.physics.arcade.enable(box);
+	game.physics.arcade.enable(cats);
     cursors = game.input.keyboard.createCursorKeys();
 
     game.camera.follow(player);
