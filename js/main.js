@@ -12,8 +12,9 @@ var player;
 var cursors;
 var box;
 var cats;
-var counter;
+var count=0;
 var text;
+var hold=false;
 
 function create() {
 
@@ -75,6 +76,18 @@ function update() {
     {
         player.body.moveRight(300);
     }
+	
+	if(game.physics.arcade.overlap(player,cats,null,null,this))
+			{
+				cats.exists=false;
+				hold=true;
+			}
+			
+	if(game.physics.arcade.overlap(player,box,null,null,this))
+			{
+				count++;
+				hold=false;
+			}
 	
 
 }
