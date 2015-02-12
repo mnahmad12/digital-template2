@@ -82,19 +82,15 @@ function update() {
         player.body.velocity.x=200;
     }
 	
-	if(game.physics.arcade.overlap(player,cats,null,null,this))
-			{
-				
-				cats.exists=false;
-				hold=true;
-			}
-			
+
 	if(game.physics.arcade.overlap(player,box,null,null,this))
 			{
 				count++;
 				hold=false;
 			}
 	
+	game.physics.arcade.collide(player,cats);
+			cats.body.bounce.set(1);
 
 }
 
