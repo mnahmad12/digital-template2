@@ -35,6 +35,7 @@ function create() {
     {
         //  Create a new sprite at a random world location
         cats.create(game.world.randomX, game.world.randomY, 'cat');
+		cats.body.setSize(50,50);
     }
 	
     game.physics.p2.enable(player);
