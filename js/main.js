@@ -5,7 +5,7 @@ function preload() {
     game.load.image('background','assets/wood.png');
     game.load.image('player','assets/phaser-dude.png');
 	game.load.image('box','assets/box.jpg');
-
+	game.load.image('cat','assets/cat.jpg');
 }
 
 var player;
@@ -21,14 +21,22 @@ function create() {
     game.add.tileSprite(0, 0, 1920, 1920, 'background');
 
     game.world.setBounds(0, 0, 1920, 1920);
-
+	cats = game.add.group();
     game.physics.startSystem(Phaser.Physics.P2JS);
 
-	box = game.add.sprite(500, 500, 'box');
+	box = game.add.sprite(1000, 1000, 'box');
 	box.x=50;
 	box.y=50;
     player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
 
+	
+	//  And add 10 sprites to it
+    for (var i = 0; i < 10; i++)
+    {
+        //  Create a new sprite at a random world location
+        cats.create(game.world.randomX, game.world.randomY, 'sonic');
+    }
+	
     game.physics.p2.enable(player);
 
     cursors = game.input.keyboard.createCursorKeys();
