@@ -61,23 +61,25 @@ function create() {
 function update() {
 
     //player.body.setZeroVelocity();
-
+	player.body.velocity.x=0;
+	player.body.velocity.y=0;
+	
     if (cursors.up.isDown)
     {
-        player.body.moveUp(300)
+        player.body.velocity.y=200;
     }
     else if (cursors.down.isDown)
     {
-        player.body.moveDown(300);
+        player.body.velocity.y=-200;
     }
 
     if (cursors.left.isDown)
     {
-        player.body.velocity.x = -300;
+        player.body.velocity.x = -200;
     }
     else if (cursors.right.isDown)
     {
-        player.body.moveRight(300);
+        player.body.velocity.x=200;
     }
 	
 	if(game.physics.arcade.overlap(player,cats,null,null,this))
