@@ -5,7 +5,7 @@ function preload() {
     game.load.image('background','assets/wood.png');
     game.load.image('player','assets/phaser-dude.png');
 	game.load.image('box','assets/box.jpg');
-	game.load.image('cat','assets/cat.jpg');
+	game.load.image('cat','assets/cat.png');
 }
 
 var player;
@@ -22,7 +22,7 @@ function create() {
 
     game.world.setBounds(0, 0, 1920, 1920);
 	cats = game.add.group();
-    game.physics.startSystem(Phaser.Physics.P2JS);
+    game.physics.startSystem(Phaser.Physics.ARCADE);
 
 	box = game.add.sprite(1000, 1000, 'box');
 	box.x=50;
@@ -51,6 +51,7 @@ function create() {
     //  (until it reaches an edge of the world)
     game.camera.deadzone = new Phaser.Rectangle(100, 100, 600, 400);
 
+	if(player
 }
 
 function update() {
@@ -74,6 +75,7 @@ function update() {
     {
         player.body.moveRight(300);
     }
+	
 
 }
 
