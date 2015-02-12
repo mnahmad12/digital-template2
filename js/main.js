@@ -39,7 +39,7 @@ window.onload = function() {
 		
 		preload: function()
 		{
-			this.load.image('worldBack','assets/metal.png')
+			this.load.image('worldBack','assets/maze.png')
 			
 		},
 		
@@ -48,10 +48,7 @@ window.onload = function() {
 			this.background=this.game.add.tileSprite(0, 0,800,600, 'worldBack');
 			
 			this.style = {font: "25px Arial", fill: "#00FF0A", align: "center" };
-			this.text = this.add.text( this.world.centerX, 150, "Once upon a time phaser-dude bob " +
-				"lost his dog.\n He searched and he searched but to no avail.\n Until one day, a message showed up at his house\n" +
-				" if you want you dog back, go to the Lair of the Monsters,\n find the 3 hidden keys and only then will you get" + 
-				"back you dog!\n So Bob went....... \n\n(Press the Left Arrow, <- , to begin)", this.style );
+			this.text = this.add.text( this.world.centerX, 150, "Get through the maze alive and catch the cat!", this.style );
 			this.text.anchor.setTo( 0.5, 0.0 );
 			
 			
