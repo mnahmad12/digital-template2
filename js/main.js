@@ -34,7 +34,7 @@ function create() {
     for (var i = 0; i < 10; i++)
     {
         //  Create a new sprite at a random world location
-        cats.create(game.world.randomX, game.world.randomY, 'sonic');
+        cats.create(game.world.randomX, game.world.randomY, 'cat');
     }
 	
     game.physics.p2.enable(player);
