@@ -88,7 +88,7 @@ function update() {
 				count++;
 				hold=false;
 			}
-	for (var i = 0; i < cats.children.length) {
+	for (var i = 0; i < cats.children.length;) {
 	if (cats.children[i].x == player.x) {
 		game.physics.arcade.collide(cats[i],player);
 			game.cats[i].bounce.set(1);
