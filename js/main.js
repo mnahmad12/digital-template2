@@ -66,11 +66,11 @@ function update() {
 	
     if (cursors.up.isDown)
     {
-        player.body.velocity.y=200;
+        player.body.velocity.y=-200;
     }
     else if (cursors.down.isDown)
     {
-        player.body.velocity.y=-200;
+        player.body.velocity.y=200;
     }
 
     if (cursors.left.isDown)
@@ -84,6 +84,7 @@ function update() {
 	
 	if(game.physics.arcade.overlap(player,cats,null,null,this))
 			{
+				cat.kill();
 				cats.exists=false;
 				hold=true;
 			}
