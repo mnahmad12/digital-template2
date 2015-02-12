@@ -15,10 +15,12 @@ var cats;
 var count=0;
 var text;
 var hold=false;
+var text2;
 
 function create() {
 
 	text=game.add.text(250,250,"Catch the cats and put them in the box!");
+	text2=game.add.text(250,400,"You have caught:" + count + "cats!");
     game.add.tileSprite(0, 0, 1920, 1920, 'background');
 
     game.world.setBounds(0, 0, 1920, 1920);
