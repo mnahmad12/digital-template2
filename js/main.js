@@ -20,9 +20,9 @@ function create() {
 
     game.physics.startSystem(Phaser.Physics.P2JS);
 
-	box = game.add.sprite(game.world.centerX, game.world.centerY, 'box');
-	box.x=100;
-	box.y=100;
+	box = game.add.sprite(500, 500, 'box');
+	box.x=50;
+	box.y=50;
     player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
 
     game.physics.p2.enable(player);
