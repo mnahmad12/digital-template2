@@ -4,11 +4,13 @@ function preload() {
 
     game.load.image('background','assets/wood.png');
     game.load.image('player','assets/phaser-dude.png');
+	game.load.image('box','assets/box.jpg');
 
 }
 
 var player;
 var cursors;
+var box;
 
 function create() {
 
@@ -18,6 +20,7 @@ function create() {
 
     game.physics.startSystem(Phaser.Physics.P2JS);
 
+	box=game.add.sprite(game.world.centerX,game.world.centerY,'box');
     player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
 
     game.physics.p2.enable(player);
