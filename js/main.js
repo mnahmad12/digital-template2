@@ -54,7 +54,7 @@ function create() {
     //  (until it reaches an edge of the world)
     game.camera.deadzone = new Phaser.Rectangle(100, 100, 600, 400);
 
-	if(player
+	
 }
 
 function update() {
