@@ -30,7 +30,7 @@ function create() {
     //  It does NOT keep the target sprite within the rectangle, all it does is control the boundary
     //  at which the camera will start to move. So when the sprite hits the edge, the camera scrolls
     //  (until it reaches an edge of the world)
-    game.camera.deadzone = new Phaser.Rectangle(100, 100, 600, 400);
+    //game.camera.deadzone = new Phaser.Rectangle(100, 100, 600, 400);
 
 }
 
