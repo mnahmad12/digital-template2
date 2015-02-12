@@ -60,7 +60,7 @@ function create() {
 
 function update() {
 
-    player.body.setZeroVelocity();
+    //player.body.setZeroVelocity();
 
     if (cursors.up.isDown)
     {
