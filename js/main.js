@@ -84,7 +84,7 @@ function update() {
 	
 	if(game.physics.arcade.overlap(player,cats,null,null,this))
 			{
-				cat.kill();
+				cats.kill();
 				cats.exists=false;
 				hold=true;
 			}
