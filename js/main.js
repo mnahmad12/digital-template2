@@ -11,9 +11,13 @@ function preload() {
 var player;
 var cursors;
 var box;
+var cats;
+var counter;
+var text;
 
 function create() {
 
+	text=game.add.text(250,250,"Catch the cats and put them in the box!");
     game.add.tileSprite(0, 0, 1920, 1920, 'background');
 
     game.world.setBounds(0, 0, 1920, 1920);
