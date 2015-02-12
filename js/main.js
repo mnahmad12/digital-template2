@@ -47,7 +47,7 @@ window.onload = function() {
 		{
 			this.background=this.game.add.tileSprite(0, 0,800,600, 'worldBack');
 			
-			this.style = {font: "25px Arial", fill: "#00FF0A", align: "center" };
+			this.style = {font: "25px Arial", fill: "#FF0000", align: "center" };
 			this.text = this.add.text( this.world.centerX, 150, "Get through the maze alive and catch the cat!", this.style );
 			this.text.anchor.setTo( 0.5, 0.0 );
 			
